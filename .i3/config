@@ -75,7 +75,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec st -e 'bmenu'
 # bindsym $mod+F2 exec palemoon
 bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec dolphin
+bindsym $mod+e exec dolphin
+bindsym $mod+F3 exec st -e 'vim'
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
@@ -90,6 +91,7 @@ bindsym Shift+Print exec --no-startup-id spectacle -a
 bindsym Ctrl+Print exec spectacle -r
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Ctrl+Shift+Escape exec --no-startup-id gnome-system-monitor
 
 # focus_follows_mouse no
 
@@ -133,7 +135,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -220,6 +222,7 @@ for_window [class="Viewnior"] floating_minimum_size 98 ppt x 98 ppt
 # for_window [class="Viewnior"] resize set width 90 ppt
 #j for_window [class="Viewnior"] resize set height 90 ppt
 for_window [title="KInfocenter"] floating enable border pixel 1
+for_window [class="Gnome-system-monitor"] floating enable border pixel 1
 for_window [class="spectacle"] floating enable sticky enable border normal
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -314,11 +317,11 @@ exec --no-startup-id feh --bg-scale /home/archwork/pix/wallpapers/Future/1378870
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+# exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
-exec --no-startup-id start_conky_green
+# exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
