@@ -211,6 +211,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open specific applications in floating mode
 #for_window [class="Spotify"] floating enable border pixel 1 -g 150x150+1600+150
+for_window [window_type="notification"] floating enable
 for_window [class="Firefox"] border pixel 2
 gaps inner 0
 gaps outer 0
@@ -223,7 +224,7 @@ for_window [class="Viewnior"] floating_minimum_size 98 ppt x 98 ppt
 #j for_window [class="Viewnior"] resize set height 90 ppt
 for_window [title="KInfocenter"] floating enable border pixel 1
 for_window [class="Gnome-system-monitor"] floating enable border pixel 1
-for_window [class="spectacle"] floating enable sticky enable border normal
+for_window [class="spectacle"] floating enable sticky enable border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="TeamViewer"] floating enable border pixel 3
